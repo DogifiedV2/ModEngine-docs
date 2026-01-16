@@ -76,10 +76,10 @@ Use these in [Skills](skills/overview) for taming-specific animations:
 pet_wolf:
   Model: wolf
   Display: '&7Pet Wolf'
+  Type: Wolf
   Taming:
     item: minecraft:bone
     chance: 0.33
-    can_sit: true
 ```
 
 ### Rare Tame
@@ -103,6 +103,7 @@ pet_fox:
   Taming:
     item: minecraft:sweet_berries
     chance: 0.25
+    can_sit: true
   Skills:
     - animation{name=idle, mode=loop} ~idle
     - animation{name=walk, mode=loop} ~moving
@@ -119,6 +120,7 @@ husky:
   Taming:
     item: minecraft:bone
     chance: 0.33
+    can_sit: true
   Skills:
     - animation{name=idle, mode=loop} ~idle
     - animation{name=run, mode=loop} ~moving

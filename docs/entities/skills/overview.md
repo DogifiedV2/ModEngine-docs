@@ -39,43 +39,44 @@ What happens when the skill activates.
 
 | Action | Description |
 |--------|-------------|
-| [animation](actions#animation) | Play an animation |
-| [damage](actions#damage) | Deal damage |
-| [hidebone](actions#hidebone) | Hide a bone |
-| [showbone](actions#showbone) | Show a bone |
+| [animation](actions/animation) | Play an animation |
+| [damage](actions/damage) | Deal damage |
+| [hidebone](actions/hidebone) | Hide a bone |
+| [showbone](actions/showbone) | Show a bone |
 
 ### Targets
 Who the action affects.
 
 | Target | Description |
 |--------|-------------|
-| [@Self](targets#self) | The entity itself (default) |
-| [@Attacker](targets#attacker) | Entity that last attacked |
-| [@PlayersInRadius](targets#playersinradius) | Players within range |
+| [@Self](targets/self) | The entity itself (default) |
+| [@Attacker](targets/attacker) | Entity that last attacked |
+| [@PlayersInRadius](targets/players-in-radius) | Players within range |
 
 ### Triggers
 When the skill activates.
 
 **Event triggers** (fire once per event):
+
 | Trigger | Description |
 |---------|-------------|
-| [~onSpawn](triggers#onspawn) | When spawned |
-| [~onDeath](triggers#ondeath) | When killed |
-| [~onHurt](triggers#onhurt) | When damaged |
+| [~onSpawn](triggers/on-spawn) | When spawned |
+| [~onDeath](triggers/on-death) | When killed |
+| [~onHurt](triggers/on-hurt) | When damaged |
 
 **State triggers** (active while condition is true):
+
 | Trigger | Description |
 |---------|-------------|
-| [~idle](triggers#idle) | While not moving |
-| [~moving](triggers#moving) | While moving |
-| [~health](triggers#health) | Based on health % |
+| [~idle](triggers/idle) | While not moving |
+| [~moving](triggers/moving) | While moving |
+| [~health](triggers/health) | Based on health % |
 
 **Pet triggers** (require [Taming](../taming)):
+
 | Trigger | Description |
 |---------|-------------|
-| [~tamed](triggers#tamed) | While tamed |
-| [~untamed](triggers#untamed) | While not tamed |
-| [~sitting](triggers#sitting) | While sitting |
+| [~tamed / ~untamed / ~sitting](triggers/pet-triggers) | Pet state triggers |
 
 ## Skill Order
 
