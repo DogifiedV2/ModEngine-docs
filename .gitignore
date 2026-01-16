@@ -4,6 +4,7 @@
 # Production
 /build
 /.idea
+/.claude
 
 # Generated files
 .docusaurus

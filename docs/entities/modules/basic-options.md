@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Basic Options
@@ -39,7 +39,7 @@ my_entity:
 - `&k` - Obfuscated
 - `&r` - Reset
 
-See the [color codes reference](../reference/color-codes) for all options.
+See the [color codes reference](../../reference/color-codes) for all options.
 
 ## Health
 
@@ -87,7 +87,7 @@ my_entity:
 | Snow_Golem | Snow_Golem |
 | Slime | Slime, Magma_Cube |
 
-See the [styles reference](../reference/styles) for required bone names.
+See the [styles reference](../../reference/styles) for required bone names.
 
 ## Behavior
 
