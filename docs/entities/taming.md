@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Taming
@@ -61,7 +61,7 @@ Specify `AIGoals` for full control.
 
 ## Pet Triggers
 
-Use these in [Skills](../skills/overview) for taming-specific animations:
+Use these in [Skills](skills/overview) for taming-specific animations:
 
 | Trigger | Description |
 |---------|-------------|

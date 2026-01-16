@@ -30,17 +30,17 @@ friendly_creature:
 
 | Section | Required | Description |
 |---------|----------|-------------|
-| [Model](modules/basic-options#model) | Yes | The model to use for this entity |
-| [Display](modules/basic-options#display) | No | Custom display name |
-| [Health](modules/basic-options#health) | No | Maximum health points |
-| [Damage](modules/basic-options#damage) | No | Base attack damage |
-| [Style](modules/basic-options#style) | No | Procedural animation style |
-| [Behavior](modules/basic-options#behavior) | No | AI behavior preset |
-| [Hitbox](modules/hitbox) | No | Custom hitbox dimensions |
-| [AIGoals](modules/ai-goals) | No | Custom AI goals |
-| [AITargets](modules/ai-targets) | No | Custom targeting behavior |
-| [Taming](modules/taming) | No | Pet/taming behavior |
-| [HiddenBones](modules/hidden-bones) | No | Bones hidden by default |
+| [Model](basic-options#model) | Yes | The model to use for this entity |
+| [Display](basic-options#display) | No | Custom display name |
+| [Health](basic-options#health) | No | Maximum health points |
+| [Damage](basic-options#damage) | No | Base attack damage |
+| [Style](basic-options#style) | No | Procedural animation style |
+| [Behavior](basic-options#behavior) | No | AI behavior preset |
+| [Hitbox](hitbox) | No | Custom hitbox dimensions |
+| [AIGoals](ai-goals) | No | Custom AI goals |
+| [AITargets](ai-targets) | No | Custom targeting behavior |
+| [Taming](taming) | No | Pet/taming behavior |
+| [HiddenBones](hidden-bones) | No | Bones hidden by default |
 | [Skills](skills/overview) | No | Reactive behaviors |
 
 ## Model Loading
