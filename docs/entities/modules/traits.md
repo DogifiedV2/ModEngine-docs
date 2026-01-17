@@ -99,6 +99,52 @@ Traits:
 - Freeze meter doesn't accumulate
 - Useful for ice/snow themed mobs
 
+### amphibious
+
+Gives the entity amphibious pathfinding (can walk on land and swim in water).
+
+```yaml
+Traits:
+  - amphibious
+  - waterbreathing
+```
+
+**Behavior:**
+- Uses AmphibiousPathNavigation (like turtles and frogs)
+- Can pathfind both on land and through water
+- Required for `tryfindwater` goal to work properly
+- Usually combined with `waterbreathing`
+
+:::tip
+This is essential for mobs that need to move between land and water:
+```yaml
+Traits:
+  - amphibious
+  - waterbreathing
+AIGoals:
+  - float
+  - tryfindwater
+  - randomswim
+  - wateravoidingrandomstroll
+```
+:::
+
+### aquatic
+
+Gives the entity water-only pathfinding (stays in water like fish).
+
+```yaml
+Traits:
+  - aquatic
+  - waterbreathing
+```
+
+**Behavior:**
+- Uses WaterBoundPathNavigation (like dolphins and fish)
+- Can only pathfind through water
+- Entity will struggle on land
+- Usually combined with `waterbreathing`
+
 ---
 
 ## Examples

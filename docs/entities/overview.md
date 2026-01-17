@@ -41,6 +41,7 @@ friendly_creature:
 | [AITargets](modules/ai-targets) | No | Custom targeting behavior |
 | [Taming](modules/taming) | No | Pet/taming behavior |
 | [HiddenBones](modules/hidden-bones) | No | Bones hidden by default |
+| [Drops](modules/drops) | No | Custom death loot drops |
 | [Skills](skills/overview) | No | Reactive behaviors |
 
 ## Model Loading
