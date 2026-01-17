@@ -266,7 +266,7 @@ Combine `fleesun` and `restrictsun` for undead-style sun avoidance:
 
 ## Pet Goals
 
-These goals work with the [Taming](/docs/entities/modules/taming) module.
+These goals work with the [Taming](/docs/entities/modules/taming.md) module.
 
 ### sitwhenordered
 

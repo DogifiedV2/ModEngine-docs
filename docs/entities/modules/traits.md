@@ -197,7 +197,7 @@ Traits are always active and don't require AI decision-making. For example, the 
 
 ## Combining with Presets
 
-If you use a [Preset](/docs/entities/modules/presets), the preset's traits apply unless you override them:
+If you use a [Preset](/docs/entities/modules/presets.md), the preset's traits apply unless you override them:
 
 ```yaml
 # Uses skeleton preset's sunburn trait

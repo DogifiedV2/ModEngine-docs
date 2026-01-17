@@ -80,7 +80,7 @@ Targets the nearest entity of a specific type. Much more flexible than `nearestp
 
 ## Pet Targets
 
-These targets work with the [Taming](/docs/entities/modules/taming) module for pet behavior.
+These targets work with the [Taming](/docs/entities/modules/taming.md) module for pet behavior.
 
 ### ownerhurtby
 
