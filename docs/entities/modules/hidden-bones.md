@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # Hidden Bones
@@ -22,7 +22,7 @@ my_entity:
 - Listed bones are hidden when the entity spawns
 - Works with both GeckoLib and Blockbench models
 - Bone names are case-insensitive
-- Use [Skills](skills/overview) to show/hide bones dynamically
+- Use [Skills](../skills/overview) to show/hide bones dynamically
 
 ## Dynamic Visibility
 
