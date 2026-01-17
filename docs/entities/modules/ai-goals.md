@@ -185,19 +185,50 @@ The swell goal makes the entity start swelling when within 3 blocks of a target.
 
 ### rangedattack
 
-Generic ranged attack behavior (like witch potion throwing).
+Generic ranged attack behavior with customizable projectiles (snowballs, potions, fireballs, etc.).
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
+| projectile | string | snowball | Projectile type (see below) |
+| potion | string | harming | Potion effect (for splash/lingering potions) |
 | attackInterval | int | 60 | Ticks between attacks |
 | attackRadius | double | 15.0 | Maximum attack range |
 | speed | double | 1.0 | Movement speed when chasing |
 
+**Projectile Types:**
+
+| Projectile | Description |
+|------------|-------------|
+| `snowball` | Snow golem style (default) |
+| `egg` | Thrown eggs |
+| `small_fireball` | Blaze-style fireball |
+| `fireball` | Ghast-style large fireball |
+| `splash_potion` | Splash potion with effect |
+| `lingering_potion` | Lingering potion cloud |
+| `arrow` | Shoots arrows |
+| `trident` | Throws trident |
+
+**Potion Types** (for `splash_potion` and `lingering_potion`):
+
+`harming`, `healing`, `poison`, `regeneration`, `slowness`, `weakness`, `strength`, `swiftness`, `invisibility`, `fire_resistance`, `night_vision`, `water_breathing`, `turtle_master`, `slow_falling`
+
 **Priority:** 4
 
 ```yaml
-- rangedattack
-- rangedattack{attackInterval=40, attackRadius=20}
+# Snow golem style (default)
+- rangedattack{projectile=snowball}
+
+# Witch-like potion thrower
+- rangedattack{projectile=splash_potion, potion=poison, attackInterval=60}
+
+# Blaze-like fireball shooter
+- rangedattack{projectile=small_fireball, attackInterval=40}
+
+# Ghast-like entity
+- rangedattack{projectile=fireball, attackInterval=80}
+
+# Drowned-like trident thrower
+- rangedattack{projectile=trident, attackInterval=50}
 ```
 
 ### rangedbowattack
@@ -341,7 +372,7 @@ Eats grass blocks (like sheep).
 
 ### breakdoor
 
-Breaks doors (like zombies on hard difficulty).
+Breaks doors (like zombies on hard difficulty). Automatically configures the entity's pathfinding to plan routes through closed doors.
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -354,9 +385,23 @@ Breaks doors (like zombies on hard difficulty).
 - breakdoor{breaktime=120}
 ```
 
+:::tip Full Zombie-like Behavior
+For complete door-breaking behavior, combine with `nearestplayer{mustsee=false}`:
+```yaml
+AIGoals:
+  - float
+  - breakdoor{breaktime=120}
+  - meleeattack
+  - wateravoidingrandomstroll
+AITargets:
+  - nearestplayer{mustsee=false}   # Can sense through doors
+```
+This lets the entity detect players through closed doors and path to break them down.
+:::
+
 ### opendoor
 
-Opens and optionally closes doors.
+Opens and optionally closes doors (like villagers). Automatically configures the entity's pathfinding to plan routes through closed doors.
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
@@ -655,4 +700,51 @@ AIGoals:
   - tempt{items=wheat;carrot, canscare=true}
   - wateravoidingrandomstroll{speed=0.6}
   - lookaround
+```
+
+### Witch-like Potion Thrower
+```yaml
+AIGoals:
+  - float
+  - rangedattack{projectile=splash_potion, potion=poison, attackInterval=60}
+  - wateravoidingrandomstroll
+  - lookatplayer
+AITargets:
+  - nearestplayer
+```
+
+### Blaze-like Fire Mage
+```yaml
+AIGoals:
+  - float
+  - rangedattack{projectile=small_fireball, attackInterval=40, attackRadius=16}
+  - wateravoidingrandomstroll
+  - lookatplayer
+AITargets:
+  - nearestplayer
+  - hurtbytarget
+Traits:
+  - fireimmune
+```
+
+### Snow Golem Clone
+```yaml
+AIGoals:
+  - float
+  - rangedattack{projectile=snowball, attackInterval=20}
+  - wateravoidingrandomstroll
+AITargets:
+  - nearestattackable{targettype=monster}
+```
+
+### Trident-Throwing Guardian
+```yaml
+AIGoals:
+  - float
+  - rangedattack{projectile=trident, attackInterval=50, attackRadius=20}
+  - randomswim
+AITargets:
+  - nearestplayer
+Traits:
+  - waterbreathing
 ```

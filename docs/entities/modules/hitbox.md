@@ -6,18 +6,68 @@ sidebar_position: 2
 
 Configure the entity's collision box and eye height.
 
-## Auto-Detection
+## Default Behavior
 
-If `Hitbox` is not specified, ModEngine automatically calculates the hitbox from your model's geometry. This works for both Blockbench and GeckoLib models.
+ModEngine uses sensible defaults that match vanilla Minecraft mobs:
 
-The auto-detection:
-- Transforms all cube vertices through the bone hierarchy
-- Finds the bounding box of all geometry
-- Sets eye height to 85% of the total height
+| Dimension | Default | Behavior |
+|-----------|---------|----------|
+| **width** | `0.6` | Standard humanoid width (matches Zombie, Villager, Skeleton) |
+| **height** | auto | Calculated from model geometry |
+| **eye_height** | 85% | 85% of the final height |
+
+This means entities can navigate through standard 1-block wide openings (like doors) without getting stuck.
+
+:::tip Why not auto-calculate width?
+Model bounds include arms, wings, and decorations that extend outward. Using these for collision would create hitboxes wider than the entity's "core body", causing navigation issues. Vanilla Minecraft uses a fixed 0.6 width for all humanoid mobs regardless of their visual size.
+:::
+
+## Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| copy | string | - | Copy hitbox from an existing entity (e.g., `minecraft:zombie`) |
+| width | float | 0.6 | Width and depth in blocks |
+| height | float | auto | Height in blocks |
+| eye_height | float | 0.85 | Eye position height |
+
+## Copying from Existing Entities
+
+Use `copy` to match the exact hitbox of any registered entity:
+
+```yaml
+my_zombie:
+  Model: custom_zombie
+  Hitbox:
+    copy: minecraft:zombie  # width: 0.6, height: 1.95
+```
+
+You can copy and then override specific values:
+
+```yaml
+tall_zombie:
+  Model: tall_zombie
+  Hitbox:
+    copy: minecraft:zombie  # Get base dimensions
+    height: 2.5             # Override just the height
+```
+
+### Common Entity Hitboxes
+
+| Entity | Width | Height |
+|--------|-------|--------|
+| `minecraft:zombie` | 0.6 | 1.95 |
+| `minecraft:skeleton` | 0.6 | 1.99 |
+| `minecraft:spider` | 1.4 | 0.9 |
+| `minecraft:creeper` | 0.6 | 1.7 |
+| `minecraft:enderman` | 0.6 | 2.9 |
+| `minecraft:iron_golem` | 1.4 | 2.7 |
+| `minecraft:wolf` | 0.6 | 0.85 |
+| `minecraft:chicken` | 0.4 | 0.7 |
 
 ## Manual Configuration
 
-For precise control, specify the hitbox manually:
+For precise control, specify values manually:
 
 ```yaml
 my_entity:
@@ -26,14 +76,6 @@ my_entity:
     height: 2.0
     eye_height: 1.7
 ```
-
-## Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| width | float | auto | Width and depth in blocks |
-| height | float | auto | Height in blocks |
-| eye_height | float | 0.85 | Eye position height |
 
 ### Eye Height
 
@@ -55,6 +97,22 @@ Hitbox:
 
 ## Examples
 
+### Standard Humanoid
+```yaml
+custom_villager:
+  Model: villager_model
+  # No Hitbox needed - defaults work perfectly
+  # width: 0.6 (default), height: auto from model
+```
+
+### Copy a Spider
+```yaml
+giant_spider:
+  Model: spider_model
+  Hitbox:
+    copy: minecraft:spider
+```
+
 ### Small Creature
 ```yaml
 tiny_bug:
@@ -73,11 +131,4 @@ giant_boss:
     width: 2.0
     height: 4.0
     eye_height: 3.5
-```
-
-### Let Auto-Detection Handle It
-```yaml
-auto_sized:
-  Model: my_model
-  # No Hitbox specified - calculated from model
 ```

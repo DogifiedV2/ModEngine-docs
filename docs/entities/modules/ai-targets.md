@@ -27,13 +27,18 @@ Targets the nearest player within range.
 
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| - | - | - | No parameters |
+| mustsee | boolean | true | Requires line of sight to target |
 
 **Priority:** 1
 
 ```yaml
 - nearestplayer
+- nearestplayer{mustsee=false}   # Can sense through doors (like zombies)
 ```
+
+:::tip
+Set `mustsee=false` for mobs that should detect players through closed doors, like zombies breaking down doors.
+:::
 
 ### hurtbytarget
 
@@ -167,6 +172,18 @@ Attacks players on sight:
 ```yaml
 AITargets:
   - nearestplayer
+```
+
+### Door Breaker (Zombie-like)
+Can sense players through doors and break them down:
+```yaml
+AIGoals:
+  - float
+  - breakdoor{breaktime=120}
+  - meleeattack
+  - wateravoidingrandomstroll
+AITargets:
+  - nearestplayer{mustsee=false}   # Senses through doors
 ```
 
 ### Neutral
