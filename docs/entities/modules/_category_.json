@@ -1,5 +1,8 @@
 {
   "label": "Modules",
   "position": 2,
-  "collapsed": true
+  "link": {
+    "type": "doc",
+    "id": "entities/modules/overview"
+  }
 }

@@ -56,13 +56,35 @@ Who the action affects.
 ### Triggers
 When the skill activates.
 
-**Event triggers** (fire once per event):
+**Lifecycle triggers**:
 
 | Trigger | Description |
 |---------|-------------|
-| [~onSpawn](triggers/on-spawn) | When spawned |
-| [~onDeath](triggers/on-death) | When killed |
-| [~onHurt](triggers/on-hurt) | When damaged |
+| [~onSpawn](triggers/on-spawn) | When entity spawns |
+| [~onDeath](triggers/on-death) | When entity dies |
+| [~onLoad](triggers/on-load) | When entity loads from save |
+| [~onDespawn](triggers/on-despawn) | When entity is removed (not death) |
+
+**Combat triggers**:
+
+| Trigger | Description |
+|---------|-------------|
+| [~onHurt](triggers/on-hurt) | When entity takes damage |
+| [~onAttack](triggers/on-attack) | When entity attacks |
+| [~onKill](triggers/on-kill) | When entity kills something |
+| [~onEnterCombat](triggers/on-enter-combat) | When entering combat |
+| [~onDropCombat](triggers/on-drop-combat) | When leaving combat |
+| [~onTargetChange](triggers/on-target-change) | When target changes |
+| [~onShoot](triggers/on-shoot) | When firing ranged attack |
+| [~onExplode](triggers/on-explode) | When exploding (creeper-like) |
+
+**Utility triggers**:
+
+| Trigger | Description |
+|---------|-------------|
+| [~onTimer](triggers/on-timer) | Periodic execution |
+| [~onInteract](triggers/on-interact) | When player right-clicks |
+| [~onSignal](triggers/on-signal) | When receiving a signal |
 
 **State triggers** (active while condition is true):
 

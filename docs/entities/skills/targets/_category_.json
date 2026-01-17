@@ -1,5 +1,8 @@
 {
   "label": "Targets",
   "position": 3,
-  "collapsed": true
+  "link": {
+    "type": "doc",
+    "id": "entities/skills/targets/overview"
+  }
 }

@@ -1,5 +1,8 @@
 {
   "label": "Triggers",
   "position": 4,
-  "collapsed": true
+  "link": {
+    "type": "doc",
+    "id": "entities/skills/triggers/overview"
+  }
 }
