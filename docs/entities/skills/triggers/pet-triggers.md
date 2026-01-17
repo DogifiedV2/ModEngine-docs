@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Pet Triggers
 
-These triggers require the [Taming](/entities/taming) module.
+These triggers require the [Taming](/entities/modules/taming) module.
 
 ## ~tamed
 

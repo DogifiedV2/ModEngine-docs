@@ -72,7 +72,7 @@ When the skill activates.
 | [~moving](triggers/moving) | While moving |
 | [~health](triggers/health) | Based on health % |
 
-**Pet triggers** (require [Taming](../taming)):
+**Pet triggers** (require [Taming](../modules/taming)):
 
 | Trigger | Description |
 |---------|-------------|

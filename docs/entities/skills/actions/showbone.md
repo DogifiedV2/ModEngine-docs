@@ -15,7 +15,7 @@ Shows a previously hidden bone. Works with both GeckoLib and Blockbench models.
 ## Notes
 
 - Bone names are case-insensitive
-- Typically used with bones hidden via [HiddenBones](/entities/hidden-bones) module
+- Typically used with bones hidden via [HiddenBones](/entities/modules/hidden-bones) module
 - Use [hidebone](hidebone) to hide bones dynamically
 
 ## Examples

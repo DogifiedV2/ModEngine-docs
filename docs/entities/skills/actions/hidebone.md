@@ -17,7 +17,7 @@ Hides a bone on the entity. Works with both GeckoLib and Blockbench models.
 - Bone names are case-insensitive
 - Hidden bones are not rendered but still exist in the hierarchy
 - Use [showbone](showbone) to reveal hidden bones
-- For bones hidden at spawn, use the [HiddenBones](/entities/hidden-bones) module instead
+- For bones hidden at spawn, use the [HiddenBones](/entities/modules/hidden-bones) module instead
 
 ## Examples
 

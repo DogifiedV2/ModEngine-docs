@@ -84,6 +84,6 @@ my_creature:
 
 ## Next Steps
 
-- Learn about [basic options](../entities/basic-options)
-- Set up [custom AI](../entities/ai-goals)
+- Learn about [basic options](../entities/modules/basic-options)
+- Set up [custom AI](../entities/modules/ai-goals)
 - Create [skills and abilities](../entities/skills/overview)
