@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # Animation Styles
 
-The `Style` property applies procedural animation based on vanilla mob movement. Name your model's bones to match the required names below.
+The `AnimationStyle` property applies procedural animation based on vanilla mob movement. Name your model's bones to match the required names below.
 
 ## Usage
 
 ```yaml
 my_entity:
   Model: my_model
-  Style: Zombie
+  AnimationStyle: Zombie
 ```
 
 ---

@@ -16,7 +16,7 @@ zombie_variant:
   Display: '&cZombie Variant'
   Health: 30
   Damage: 6
-  Style: Zombie
+  AnimationStyle: Zombie
   Behavior: HOSTILE
   Skills:
     - animation{name=idle, mode=loop} ~idle
@@ -33,7 +33,7 @@ zombie_variant:
 | Display | &cZombie Variant | Red colored name |
 | Health | 30 | 15 hearts |
 | Damage | 6 | 3 hearts per hit |
-| Style | Zombie | Humanoid procedural animation |
+| AnimationStyle | Zombie | Humanoid procedural animation |
 | Behavior | HOSTILE | Attacks players on sight |
 
 ## Model Requirements

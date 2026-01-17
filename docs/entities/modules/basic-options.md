@@ -63,14 +63,14 @@ my_entity:
 
 Only applies when the entity has an attack goal.
 
-## Style
+## AnimationStyle
 
 Applies procedural animation based on vanilla mob bone structures. Your model's bones must match the expected names.
 
 ```yaml
 my_entity:
   Model: my_model
-  Style: Zombie
+  AnimationStyle: Zombie
 ```
 
 **Available styles:**
@@ -88,6 +88,10 @@ my_entity:
 | Slime | Slime, Magma_Cube |
 
 See the [styles reference](../../reference/styles) for required bone names.
+
+:::tip
+When using [Presets](presets), you typically don't need to specify Style - the preset handles it automatically.
+:::
 
 ## Behavior
 
@@ -118,7 +122,7 @@ fire_zombie:
   Display: '&c&lFire Zombie'
   Health: 40
   Damage: 8
-  Style: Zombie
+  AnimationStyle: Zombie
   Behavior: HOSTILE
   Skills:
     - animation{name=idle, mode=loop} ~idle

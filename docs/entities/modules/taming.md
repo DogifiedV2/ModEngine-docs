@@ -50,12 +50,12 @@ my_pet:
 
 ## Default AI
 
-Without `AIGoals`, tamed entities automatically get:
-1. SitWhenOrdered
-2. FollowOwner
-3. Float
-4. LookAtPlayer
-5. RandomLookAround
+Without `AIGoals`, tamed entities automatically get these goals:
+1. `sitwhenordered`
+2. `followowner`
+3. `float`
+4. `lookatplayer`
+5. `lookaround`
 
 Specify `AIGoals` for full control.
 

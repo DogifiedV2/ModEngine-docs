@@ -15,7 +15,7 @@ pet_fox:
   Model: custom_fox
   Display: '&6Tameable Fox'
   Health: 20
-  Style: Quadruped
+  AnimationStyle: Quadruped
 
   Taming:
     item: minecraft:sweet_berries
