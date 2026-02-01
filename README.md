@@ -1,5 +1,8 @@
 # Website
 
+If, for whatever reason, you are here, these docs are entirely ai generated simply for me to keep track of what I have done for my in-progress engine mod.
+The final result will not be ai generated (duh), and this is simply public because github requires me to.
+
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ## Installation
